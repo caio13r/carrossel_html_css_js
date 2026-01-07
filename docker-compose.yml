@@ -1,0 +1,9 @@
+services:
+  frontend:
+    image: nginx:alpine
+    container_name: cfo-ciosp-frontend
+    ports:
+      - "9050:80"
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+    restart: unless-stopped

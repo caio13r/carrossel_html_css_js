@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CFO CIOSP 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main class="page">
+    <div class="logo-container">
+      <img src="assets/Logo_CFO.svg" alt="Logo CFO" class="logo">
+      <img src="assets/Logo_CIOSP.svg" alt="Logo CIOSP" class="logo">
+    </div>
+
+    <section class="carousel" aria-label="Carrossel de imagens">
+      <button class="nav prev" id="prev" aria-label="Anterior">❮</button>
+
+      <div class="viewport" id="viewport">
+        <div class="track" id="track">
+          <div class="slide">
+            <img src="assets/img_5_57.png" alt="Imagem 1">
+          </div>
+          <div class="slide">
+            <img src="https://www.odontoperfeito.com.br/wp-content/uploads/2022/06/0405-Capa-Odontologia-inclusiva.png" alt="Imagem 2">
+          </div>
+          <div class="slide">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.hwAiuyC82SS-zsZv2CTJhgHaHh?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagem 3">
+          </div>
+          <div class="slide">
+            <img src="https://th.bing.com/th/id/OIP.ngaCSXybsvcP89UF-191rQHaE7?w=800&h=600&rs=1&pid=ImgDetMain" alt="Imagem 4">
+          </div>
+        </div>
+      </div>
+
+      <button class="nav next" id="next" aria-label="Próximo">❯</button>
+    </section>
+
+    <div class="dots" id="dots"></div>
+
+    <div class="buttons-container">
+      <a href="#sobre" class="btn-link"><img src="assets/Botão_Sobre.png" alt="Sobre" class="btn-img"></a>
+      <a href="#programacao" class="btn-link"><img src="assets/Botão_Programação.png" alt="Programação" class="btn-img"></a>
+      <a href="#noticias" class="btn-link"><img src="assets/Botão_Notícias.png" alt="Notícias" class="btn-img"></a>
+      <a href="#formulario" class="btn-link"><img src="assets/Botão_Inscreva-se.png" alt="Inscreva-se" class="btn-img"></a>
+    </div>
+
+    <section id="sobre">
+      <p class="description">
+        Está chegando o 43° Congresso Internacional de Odontologia de São Paulo – CIOSP, um dos maiores congressos do setor em todo o mundo. E o Conselho Federal de Odontologia estará presente.
+      </p>
+
+      <section class="arena-section">
+        <img src="assets/Logo_arena.svg" alt="Arena CFO" class="arena-logo">
+        <p class="arena-text">
+          O estande do CFO contará com a Arena CFO, que será palco de palestras de variados temas ligados a Odontologia e o ponto de vista ético sobre os assuntos, sempre com profissionais renomados e sem nenhum custo para quem quiser assistir. O Conselho também trará diversos serviços para o inscrito, como assistência para instalação da CFO-ID, a identidade digital da Odontologia, atualização de cadastro, anuidade, entre outros.
+        </p>
+      </section>
+    </section>
+
+    <section class="cards-container" id="inscreva-se">
+      <div class="card card-left">
+        <p class="card-date"><svg class="calendar-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zM9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg> De 28 a 31 de<br>janeiro de 2026</p>
+      </div>
+      <div class="card card-right">
+        <h3 class="card-title"><svg class="location-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg> Expo Center Norte</h3>
+        <p class="card-text">(Rua José Bernardo Pinto, 333, Vila Guilherme – São Paulo)</p>
+        <p class="card-text">O estande do CFO fica na Avenida 5000, a07, Pavilhão Vermelho.</p>
+      </div>
+    </section>
+
+    <p class="cta-text">
+      Faça uma visita ao estande do Conselho, conheça mais sobre o trabalho realizado diariamente em prol da Odontologia e participe das nossas palestras!
+    </p>
+
+    <section class="programacao-section" id="programacao">
+      <h2 class="programacao-title">Programação</h2>
+      <p class="programacao-subtitle">Confira a programação na Arena CFO</p>
+    </section>
+
+    <div class="outline-card programacao-carousel">
+      <button class="prog-nav prog-prev" id="prog-prev">❮</button>
+      
+      <div class="prog-viewport" id="prog-viewport">
+        <div class="prog-track" id="prog-track">
+          <!-- Dia 28/01 -->
+          <div class="prog-slide">
+            <span class="prog-date-badge">28/01</span>
+            <h3 class="prog-dia">Quarta-feira</h3>
+            <div class="prog-grid">
+              <div class="prog-item"><span class="prog-horario">10h</span><span class="prog-palestra">Ética e responsabilidade profissional na Odontologia</span></div>
+              <div class="prog-item"><span class="prog-horario">14h</span><span class="prog-palestra">CFO-ID: A identidade digital da Odontologia</span></div>
+              <div class="prog-item"><span class="prog-horario">11h</span><span class="prog-palestra">Inovações tecnológicas em diagnóstico odontológico</span></div>
+              <div class="prog-item"><span class="prog-horario">15h</span><span class="prog-palestra">Tendências em estética dental para 2026</span></div>
+              <div class="prog-item"><span class="prog-horario">12h</span><span class="prog-palestra">Marketing digital para consultórios</span></div>
+              <div class="prog-item"><span class="prog-horario">16h</span><span class="prog-palestra">Saúde bucal e qualidade de vida</span></div>
+              <div class="prog-item"><span class="prog-horario">13h</span><span class="prog-palestra">Novas técnicas em clareamento dental</span></div>
+              <div class="prog-item"><span class="prog-horario">17h</span><span class="prog-palestra">Encerramento do primeiro dia</span></div>
+            </div>
+          </div>
+          <!-- Dia 29/01 -->
+          <div class="prog-slide">
+            <span class="prog-date-badge">29/01</span>
+            <h3 class="prog-dia">Quinta-feira</h3>
+            <div class="prog-grid">
+              <div class="prog-item"><span class="prog-horario">10h</span><span class="prog-palestra">Odontologia preventiva e saúde pública</span></div>
+              <div class="prog-item"><span class="prog-horario">14h</span><span class="prog-palestra">Atualização em implantodontia</span></div>
+              <div class="prog-item"><span class="prog-horario">11h</span><span class="prog-palestra">Gestão de consultórios e empreendedorismo</span></div>
+              <div class="prog-item"><span class="prog-horario">15h</span><span class="prog-palestra">Biossegurança e controle de infecção</span></div>
+              <div class="prog-item"><span class="prog-horario">12h</span><span class="prog-palestra">Radiologia odontológica digital</span></div>
+              <div class="prog-item"><span class="prog-horario">16h</span><span class="prog-palestra">Laserterapia na Odontologia</span></div>
+              <div class="prog-item"><span class="prog-horario">13h</span><span class="prog-palestra">Odontologia do trabalho</span></div>
+              <div class="prog-item"><span class="prog-horario">17h</span><span class="prog-palestra">Encerramento do segundo dia</span></div>
+            </div>
+          </div>
+          <!-- Dia 30/01 -->
+          <div class="prog-slide">
+            <span class="prog-date-badge">30/01</span>
+            <h3 class="prog-dia">Sexta-feira</h3>
+            <div class="prog-grid">
+              <div class="prog-item"><span class="prog-horario">10h</span><span class="prog-palestra">Ortodontia digital e alinhadores estéticos</span></div>
+              <div class="prog-item"><span class="prog-horario">14h</span><span class="prog-palestra">Odontopediatria: abordagem humanizada</span></div>
+              <div class="prog-item"><span class="prog-horario">11h</span><span class="prog-palestra">Harmonização orofacial: aspectos éticos</span></div>
+              <div class="prog-item"><span class="prog-horario">15h</span><span class="prog-palestra">Periodontia e saúde sistêmica</span></div>
+              <div class="prog-item"><span class="prog-horario">12h</span><span class="prog-palestra">Disfunção temporomandibular</span></div>
+              <div class="prog-item"><span class="prog-horario">16h</span><span class="prog-palestra">Odontogeriatria: desafios e soluções</span></div>
+              <div class="prog-item"><span class="prog-horario">13h</span><span class="prog-palestra">Sedação consciente em Odontologia</span></div>
+              <div class="prog-item"><span class="prog-horario">17h</span><span class="prog-palestra">Encerramento do terceiro dia</span></div>
+            </div>
+          </div>
+          <!-- Dia 31/01 -->
+          <div class="prog-slide">
+            <span class="prog-date-badge">31/01</span>
+            <h3 class="prog-dia">Sábado</h3>
+            <div class="prog-grid">
+              <div class="prog-item"><span class="prog-horario">10h</span><span class="prog-palestra">Endodontia contemporânea e novos materiais</span></div>
+              <div class="prog-item"><span class="prog-horario">14h</span><span class="prog-palestra">Cirurgia oral minimamente invasiva</span></div>
+              <div class="prog-item"><span class="prog-horario">11h</span><span class="prog-palestra">Prótese dentária: planejamento digital</span></div>
+              <div class="prog-item"><span class="prog-horario">15h</span><span class="prog-palestra">Odontologia legal e perícias</span></div>
+              <div class="prog-item"><span class="prog-horario">12h</span><span class="prog-palestra">Materiais restauradores estéticos</span></div>
+              <div class="prog-item"><span class="prog-horario">16h</span><span class="prog-palestra">O futuro da Odontologia brasileira</span></div>
+              <div class="prog-item"><span class="prog-horario">13h</span><span class="prog-palestra">Odontologia hospitalar</span></div>
+              <div class="prog-item"><span class="prog-horario">17h</span><span class="prog-palestra">Encerramento oficial do evento</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="prog-nav prog-next" id="prog-next">❯</button>
+    </div>
+    
+    <div class="prog-dots" id="prog-dots"></div>
+
+    <section class="noticias-section" id="noticias">
+      <h2 class="noticias-title">Notícias</h2>
+      <div class="noticias-grid">
+        <div class="noticia-card" data-noticia="1">
+          <img src="assets/img_2_54.png" alt="Notícia 1" class="noticia-img">
+          <h4 class="noticia-titulo">Título da Notícia 1</h4>
+          <p class="noticia-texto">Descrição breve da notícia...</p>
+          <button class="saiba-mais-btn" onclick="abrirNoticia(1)">Saiba mais</button>
+        </div>
+        <div class="noticia-card" data-noticia="2">
+          <img src="assets/img_1_53.png" alt="Notícia 2" class="noticia-img">
+          <h4 class="noticia-titulo">Título da Notícia 2</h4>
+          <p class="noticia-texto">Descrição breve da notícia...</p>
+          <button class="saiba-mais-btn" onclick="abrirNoticia(2)">Saiba mais</button>
+        </div>
+        <div class="noticia-card" data-noticia="3">
+          <img src="assets/img_4_56.png" alt="Notícia 3" class="noticia-img">
+          <h4 class="noticia-titulo">Título da Notícia 3</h4>
+          <p class="noticia-texto">Descrição breve da notícia...</p>
+          <button class="saiba-mais-btn" onclick="abrirNoticia(3)">Saiba mais</button>
+        </div>
+        <div class="noticia-card" data-noticia="4">
+          <img src="assets/img_3_55.png" alt="Notícia 4" class="noticia-img">
+          <h4 class="noticia-titulo">Título da Notícia 4</h4>
+          <p class="noticia-texto">Descrição breve da notícia...</p>
+          <button class="saiba-mais-btn" onclick="abrirNoticia(4)">Saiba mais</button>
+        </div>
+      </div>
+
+      <button class="ver-mais-btn" id="ver-mais-noticias" onclick="toggleMaisNoticias()">
+        <span class="ver-mais-texto">Ver mais</span>
+        <span class="ver-mais-seta">▼</span>
+      </button>
+
+      <div class="noticias-grid noticias-extras" id="noticias-extras">
+        <div class="noticia-card" data-noticia="5">
+          <img src="assets/img_2_54.png" alt="Notícia 5" class="noticia-img">
+          <h4 class="noticia-titulo">Título da Notícia 5</h4>
+          <p class="noticia-texto">Descrição breve da notícia...</p>
+          <button class="saiba-mais-btn" onclick="abrirNoticia(5)">Saiba mais</button>
+        </div>
+        <div class="noticia-card" data-noticia="6">
+          <img src="assets/img_1_53.png" alt="Notícia 6" class="noticia-img">
+          <h4 class="noticia-titulo">Título da Notícia 6</h4>
+          <p class="noticia-texto">Descrição breve da notícia...</p>
+          <button class="saiba-mais-btn" onclick="abrirNoticia(6)">Saiba mais</button>
+        </div>
+        <div class="noticia-card" data-noticia="7">
+          <img src="assets/img_4_56.png" alt="Notícia 7" class="noticia-img">
+          <h4 class="noticia-titulo">Título da Notícia 7</h4>
+          <p class="noticia-texto">Descrição breve da notícia...</p>
+          <button class="saiba-mais-btn" onclick="abrirNoticia(7)">Saiba mais</button>
+        </div>
+        <div class="noticia-card" data-noticia="8">
+          <img src="assets/img_3_55.png" alt="Notícia 8" class="noticia-img">
+          <h4 class="noticia-titulo">Título da Notícia 8</h4>
+          <p class="noticia-texto">Descrição breve da notícia...</p>
+          <button class="saiba-mais-btn" onclick="abrirNoticia(8)">Saiba mais</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="inscricao-section" id="formulario">
+      <img src="assets/Logo_CIOSP.svg" alt="" class="inscricao-bg">
+      <h2 class="inscricao-title">Inscreva-se</h2>
+      <p class="inscricao-subtitle">Preencha o formulário abaixo para mais informações</p>
+      <form class="inscricao-form" id="inscricao-form">
+        <div class="form-group">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem" rows="5"></textarea>
+        </div>
+        <button type="submit" class="form-submit-btn">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Footer Logos -->
+    <div class="footer-logos">
+      <img src="assets/footer_logos.png" alt="Logos parceiros" class="footer-logos-img">
+    </div>
+
+    <!-- Footer Info -->
+    <footer class="footer-info">
+      <p class="footer-copyright">Copyright © 2026 CFO - Conselho Federal de Odontologia</p>
+      <p class="footer-address">Lote 2, Quadra CA-07, Centro de Atividades do Setor de Habitações Individuais Norte Lago Norte, Brasília – DF, CEP: 71.503-507</p>
+      <p class="footer-hours">Atendimento presencial: De segunda a sexta, das 8h às 17h</p>
+      <p class="footer-hours">Atendimento on-line: De segunda a sexta, das 7h45 às 17h45</p>
+    </footer>
+
+    <!-- Modal de Notícia -->
+    <div id="modal-noticia" class="modal">
+      <div class="modal-content">
+        <span class="modal-close" onclick="fecharModal()">&times;</span>
+        <div class="modal-img"></div>
+        <h2 class="modal-titulo" id="modal-titulo">Título da Notícia</h2>
+        <p class="modal-texto" id="modal-texto">Conteúdo completo da notícia aparecerá aqui...</p>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
