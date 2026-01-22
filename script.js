@@ -1,3 +1,4 @@
+
 const track = document.getElementById("track");
 const slides = Array.from(track.children);
 const prevBtn = document.getElementById("prev");
@@ -7,14 +8,11 @@ const dotsContainer = document.getElementById("dots");
 let index = 0;
 let autoplayTimer = null;
 
-// Criar dots
 slides.forEach((_, i) => {
   const dot = document.createElement("div");
   dot.classList.add("dot");
   if (i === 0) dot.classList.add("active");
-  dot.addEventListener("click", () => {
-    goToSlide(i);
-  });
+  dot.addEventListener("click", () => { goToSlide(i); });
   dotsContainer.appendChild(dot);
 });
 
@@ -23,7 +21,6 @@ const dots = Array.from(dotsContainer.children);
 function updateCarousel() {
   const width = slides[0].getBoundingClientRect().width;
   track.style.transform = `translateX(-${index * width}px)`;
-
   dots.forEach(d => d.classList.remove("active"));
   dots[index].classList.add("active");
 }
@@ -36,19 +33,11 @@ function goToSlide(i) {
   restartAutoplay();
 }
 
-prevBtn.addEventListener("click", () => {
-  goToSlide(index - 1);
-});
+prevBtn.addEventListener("click", () => { goToSlide(index - 1); });
+nextBtn.addEventListener("click", () => { goToSlide(index + 1); });
 
-nextBtn.addEventListener("click", () => {
-  goToSlide(index + 1);
-});
-
-// Autoplay
 function startAutoplay() {
-  autoplayTimer = setInterval(() => {
-    goToSlide(index + 1);
-  }, 4000);
+  autoplayTimer = setInterval(() => { goToSlide(index + 1); }, 4000);
 }
 
 function restartAutoplay() {
@@ -56,15 +45,10 @@ function restartAutoplay() {
   startAutoplay();
 }
 
-// Swipe (touch / mouse)
 let startX = 0;
 let isDragging = false;
 
-track.addEventListener("mousedown", e => {
-  isDragging = true;
-  startX = e.clientX;
-});
-
+track.addEventListener("mousedown", e => { isDragging = true; startX = e.clientX; });
 track.addEventListener("mouseup", e => {
   if (!isDragging) return;
   const diff = e.clientX - startX;
@@ -72,64 +56,58 @@ track.addEventListener("mouseup", e => {
   if (diff < -50) goToSlide(index + 1);
   isDragging = false;
 });
-
-track.addEventListener("mouseleave", () => {
-  isDragging = false;
-});
-
-track.addEventListener("touchstart", e => {
-  startX = e.touches[0].clientX;
-});
-
+track.addEventListener("mouseleave", () => { isDragging = false; });
+track.addEventListener("touchstart", e => { startX = e.touches[0].clientX; });
 track.addEventListener("touchend", e => {
-  const endX = e.changedTouches[0].clientX;
-  const diff = endX - startX;
+  const diff = e.changedTouches[0].clientX - startX;
   if (diff > 50) goToSlide(index - 1);
   if (diff < -50) goToSlide(index + 1);
 });
 
 window.addEventListener("resize", updateCarousel);
-
-// Inicialização
 updateCarousel();
 startAutoplay();
 
-// ==========================================
-// Modal de Notícias
-// ==========================================
-
 const noticias = {
-  1: {
-    titulo: "Título da Notícia 1",
-    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  1: { 
+    titulo: "Título da Notícia 1", 
+    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    imagem: "assets/img_2_54.png"
   },
-  2: {
-    titulo: "Título da Notícia 2",
-    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  2: { 
+    titulo: "Título da Notícia 2", 
+    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    imagem: "assets/img_1_53.png"
   },
-  3: {
-    titulo: "Título da Notícia 3",
-    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  3: { 
+    titulo: "Título da Notícia 3", 
+    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    imagem: "assets/img_4_56.png"
   },
-  4: {
-    titulo: "Título da Notícia 4",
-    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  4: { 
+    titulo: "Título da Notícia 4", 
+    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    imagem: "assets/img_3_55.png"
   },
-  5: {
-    titulo: "Título da Notícia 5",
-    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  5: { 
+    titulo: "Título da Notícia 5", 
+    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    imagem: "assets/img_2_54.png"
   },
-  6: {
-    titulo: "Título da Notícia 6",
-    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  6: { 
+    titulo: "Título da Notícia 6", 
+    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    imagem: "assets/img_1_53.png"
   },
-  7: {
-    titulo: "Título da Notícia 7",
-    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  7: { 
+    titulo: "Título da Notícia 7", 
+    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    imagem: "assets/img_4_56.png"
   },
-  8: {
-    titulo: "Título da Notícia 8",
-    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  8: { 
+    titulo: "Título da Notícia 8", 
+    texto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    imagem: "assets/img_3_55.png"
   }
 };
 
@@ -137,12 +115,15 @@ function abrirNoticia(id) {
   const modal = document.getElementById("modal-noticia");
   const titulo = document.getElementById("modal-titulo");
   const texto = document.getElementById("modal-texto");
+  const imagem = document.getElementById("modal-img");
   
   if (noticias[id]) {
     titulo.textContent = noticias[id].titulo;
     texto.textContent = noticias[id].texto;
+    if (imagem) {
+      imagem.src = noticias[id].imagem;
+    }
   }
-  
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
 }
@@ -153,23 +134,13 @@ function fecharModal() {
   document.body.style.overflow = "auto";
 }
 
-// Fechar modal ao clicar fora
 document.getElementById("modal-noticia").addEventListener("click", function(e) {
-  if (e.target === this) {
-    fecharModal();
-  }
+  if (e.target === this) fecharModal();
 });
 
-// Fechar modal com ESC
 document.addEventListener("keydown", function(e) {
-  if (e.key === "Escape") {
-    fecharModal();
-  }
+  if (e.key === "Escape") fecharModal();
 });
-
-// ==========================================
-// Carrossel de Programação
-// ==========================================
 
 const progTrack = document.getElementById("prog-track");
 const progSlides = Array.from(progTrack.children);
@@ -179,14 +150,11 @@ const progDotsContainer = document.getElementById("prog-dots");
 
 let progIndex = 0;
 
-// Criar dots da programação
 progSlides.forEach((_, i) => {
   const dot = document.createElement("div");
   dot.classList.add("prog-dot");
   if (i === 0) dot.classList.add("active");
-  dot.addEventListener("click", () => {
-    goToProgSlide(i);
-  });
+  dot.addEventListener("click", () => { goToProgSlide(i); });
   progDotsContainer.appendChild(dot);
 });
 
@@ -195,7 +163,6 @@ const progDots = Array.from(progDotsContainer.children);
 function updateProgCarousel() {
   const width = progSlides[0].getBoundingClientRect().width;
   progTrack.style.transform = `translateX(-${progIndex * width}px)`;
-
   progDots.forEach(d => d.classList.remove("active"));
   progDots[progIndex].classList.add("active");
 }
@@ -207,22 +174,11 @@ function goToProgSlide(i) {
   updateProgCarousel();
 }
 
-progPrevBtn.addEventListener("click", () => {
-  goToProgSlide(progIndex - 1);
-});
-
-progNextBtn.addEventListener("click", () => {
-  goToProgSlide(progIndex + 1);
-});
+progPrevBtn.addEventListener("click", () => { goToProgSlide(progIndex - 1); });
+progNextBtn.addEventListener("click", () => { goToProgSlide(progIndex + 1); });
 
 window.addEventListener("resize", updateProgCarousel);
-
-// Inicialização do carrossel de programação
 updateProgCarousel();
-
-// ==========================================
-// Ver Mais Notícias
-// ==========================================
 
 function toggleMaisNoticias() {
   const btn = document.getElementById("ver-mais-noticias");
@@ -234,6 +190,9 @@ function toggleMaisNoticias() {
   
   if (extras.classList.contains("show")) {
     texto.textContent = "Ver menos";
+    setTimeout(() => {
+      btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 150);
   } else {
     texto.textContent = "Ver mais";
   }

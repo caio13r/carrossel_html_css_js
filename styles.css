@@ -6,6 +6,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -460,7 +466,6 @@ svg.location-icon {
   display: grid !important;
 }
 
-/* Seção Inscreva-se */
 .inscricao-section {
   margin-top: 80px;
   margin-left: 60px;
@@ -563,7 +568,6 @@ svg.location-icon {
   background: #6d1029;
 }
 
-/* Footer Logos */
 .footer-logos {
   margin-top: 60px;
   margin-bottom: 40px;
@@ -577,7 +581,6 @@ svg.location-icon {
   mix-blend-mode: multiply;
 }
 
-/* Footer Info */
 .footer-info {
   margin-top: 40px;
   margin-bottom: 60px;
@@ -607,6 +610,35 @@ svg.location-icon {
   font-size: 14px;
   color: #666;
   margin-bottom: 5px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: #8B1538;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: #6d1029;
+  transform: scale(1.1);
+}
+
+.social-link svg {
+  width: 22px;
+  height: 22px;
 }
 
 .noticias-section {
@@ -675,7 +707,6 @@ img.noticia-img {
   border: none;
   border-radius: 8px;
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -686,7 +717,6 @@ img.noticia-img {
   background: #6d1029;
 }
 
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -732,9 +762,10 @@ img.noticia-img {
 .modal-img {
   width: 100%;
   height: 250px;
-  background: #ddd;
+  object-fit: cover;
   border-radius: 12px;
   margin-bottom: 20px;
+  display: block;
 }
 
 .modal-titulo {
@@ -751,7 +782,6 @@ img.noticia-img {
   line-height: 1.8;
 }
 
-/* Tablets e telas médias */
 @media (max-width: 900px) {
   .cards-container {
     flex-direction: column;
@@ -782,7 +812,6 @@ img.noticia-img {
   }
 }
 
-/* Mobile */
 @media (max-width: 600px) {
   body {
     background-size: auto 100%;
@@ -790,40 +819,64 @@ img.noticia-img {
     background-attachment: scroll;
   }
 
+  .page {
+    padding: 16px;
+    overflow-x: hidden;
+  }
+
   .logo-container {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    gap: 10px;
   }
 
   .logo {
-    height: 60px;
+    height: auto;
+    max-height: 50px;
+    width: auto;
+    max-width: 45%;
+    object-fit: contain;
+  }
+
+  .carousel .nav {
+    display: none;
+  }
+
+  .carousel {
+    gap: 0;
   }
 
   .slide img {
-    height: 350px;
+    height: 280px;
+  }
+
+  .viewport {
+    border-radius: 12px;
   }
 
   .buttons-container {
-    gap: 10px;
-    margin-top: 30px;
+    gap: 8px;
+    margin-top: 25px;
+    padding: 0 10px;
   }
 
   .btn-img {
-    height: 40px;
+    height: 35px;
   }
 
   .description {
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 16px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 15px;
   }
 
   .arena-section {
     flex-direction: column;
     gap: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-top: 40px;
   }
 
@@ -839,8 +892,8 @@ img.noticia-img {
   .cards-container {
     flex-direction: column;
     gap: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-top: 40px;
   }
 
@@ -866,8 +919,8 @@ img.noticia-img {
   }
 
   .cta-text {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
     font-size: 16px;
     margin-top: 40px;
   }
@@ -885,8 +938,8 @@ img.noticia-img {
   }
 
   .outline-card {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
     padding: 10px;
   }
 
@@ -916,8 +969,8 @@ img.noticia-img {
   }
 
   .noticias-section {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
     margin-top: 60px;
   }
 
@@ -937,8 +990,8 @@ img.noticia-img {
   }
 
   .inscricao-section {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
     padding: 30px 20px;
     margin-top: 60px;
   }
@@ -951,4 +1004,66 @@ img.noticia-img {
     font-size: 14px;
   }
 
+  .modal-content {
+    width: 95%;
+    max-width: 95%;
+    max-height: 85vh;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 12px;
+  }
+
+  .modal-close {
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+  }
+
+  .modal-img {
+    height: 180px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+
+  .modal-titulo {
+    font-size: 20px;
+    margin-bottom: 12px;
+    padding-right: 30px;
+  }
+
+  .modal-texto {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .footer-info {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 20px 15px;
+  }
+
+  .footer-copyright {
+    font-size: 14px;
+  }
+
+  .footer-address,
+  .footer-hours {
+    font-size: 12px;
+  }
+
+  .social-icons {
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-link svg {
+    width: 20px;
+    height: 20px;
+  }
 }
