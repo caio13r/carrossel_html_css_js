@@ -78,8 +78,9 @@ h1 {
 
 .slide img {
   width: 100%;
-  height: 550px;
-  object-fit: cover;
+  height: auto;
+  max-height: 550px;
+  object-fit: contain;
   display: block;
 }
 
@@ -849,7 +850,9 @@ img.noticia-img {
   }
 
   .slide img {
-    height: 280px;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
   }
 
   .viewport {
