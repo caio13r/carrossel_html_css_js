@@ -850,30 +850,23 @@ img.noticia-img {
   }
 
   .slide img {
-    width: 100%;
-    height: auto !important;
-    max-height: none !important;
-    object-fit: contain !important;
+    height: 200px;
+    object-fit: cover;
   }
 
   .viewport {
-    overflow: hidden !important;
+    overflow: hidden;
     border-radius: 12px;
+    margin: 0;
   }
 
   .carousel {
-    margin: 0 auto;
-    padding: 0;
+    gap: 0;
+    padding: 0 15px;
   }
 
   .slide {
     min-width: 100%;
-    flex-shrink: 0;
-  }
-
-  .track {
-    margin: 0;
-    padding: 0;
   }
 
   .viewport {
