@@ -857,7 +857,23 @@ img.noticia-img {
   }
 
   .viewport {
-    overflow: visible;
+    overflow: hidden !important;
+    border-radius: 12px;
+  }
+
+  .carousel {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .slide {
+    min-width: 100%;
+    flex-shrink: 0;
+  }
+
+  .track {
+    margin: 0;
+    padding: 0;
   }
 
   .viewport {
