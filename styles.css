@@ -850,9 +850,14 @@ img.noticia-img {
   }
 
   .slide img {
-    height: auto;
-    max-height: none;
-    object-fit: contain;
+    width: 100%;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
+  }
+
+  .viewport {
+    overflow: visible;
   }
 
   .viewport {
